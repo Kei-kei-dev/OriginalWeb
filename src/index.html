@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/favicon/favicon.ico">
+    <link href="./output.css" rel="stylesheet">
+    <link rel="stylesheet" href="./custom.css">
+    <title>オリジナルWebサイト</title>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> 
+</head>
+<body class="">
+    <header class="z-[3] fixed w-full md:hidden lg:block">
+        <nav class="p-5 bg-white opacity-20 shadow md:flex md:items-center md:justify-between"> 
+            <div class="flex justify-between items-center">
+                <span class="text-4xl cursor-pointer text-main font-bold">
+                    <img class="h-20 inline opacity-100" src="./img/logo.png">
+                    Dive
+                </span>
+
+                <span class="text-3xl cursor-pointer mx-2 md:hidden block">
+                    <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+                </span>
+            </div>
+
+            <ul class="md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
+                <li class="mx-4 my-6 md:my-0">
+                    <a href="#" class="text-xl hover:text-cyan-500 duration-500 font-bold">ホーム</a>
+                </li>
+                <li class="mx-4 my-6 md:my-0">
+                    <a href="#good-points" class="text-xl hover:text-cyan-500 duration-500 font-bold">プロダクト</a>
+                </li>
+                <li class="mx-4 my-6 md:my-0">
+                    <a href="#" class="text-xl hover:text-cyan-500 duration-500 font-bold">お問い合わせ</a>
+                </li>
+            </ul>
+        </nav>
+        <script>
+            function Menu(e) {
+                let list = document.querySelector('ul');
+                e.name === 'menu' ? (e.name = "close" , list.classList.
+                add('top-[80px]') , list.classList.add('opacity-100')
+                ) : (e.name = "menu", list.classList.remove('top-[80px]'), list.classList.remove('opacity-100'))
+            }
+        </script>
+    </header>
+    <section class="fv bg-main h-screen flex items-center justify-center">
+        <div class="mv md:h-2/3 md:w-4/5 max-md:w-1/2 max-md:h-5/6 bg-white rounded-2xl flex items-center max-md:pb-3">
+            <div class="flex items-center max-md:flex-col">
+                <div class="md:w-1/2 text-center">
+                    <div class="md:mb-10 max-md:flex max-md:justify-center">
+                        <img src="./img/title.png" alt="" class="max-md:w-2/3">
+                    </div>
+                    <a href="" class="bg-main hover:bg-green-500 text-white max-md:px-5 max-md:py-3 md:px-6 md:py-3 rounded-2xl inline-flex items-center font-semibold text-xl max-md:mb-10 max-md:mt-7">
+                        ご登録はこちら
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            viewBox="0 0 24 24" class="w-6 h-6 ml-2">
+                            <path d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                        </svg>
+                    </a>
+                </div>
+                <div class="md:w-1/2 md:px-3 max-md:flex max-md:justify-center">
+                    <img src="./img/front-page/theme.png" alt="" class="rounded-3xl max-md:w-2/3">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="story py-24">
+        <div class="storyItems-left px-10 py-10 ">
+            <figure>
+                <img src="./img/front-page/wo-people1.jpg" alt="">
+            </figure>
+        </div>
+        <div class="storyItems-right px-10 py-10">
+            <figure class="flex justify-end">
+                <img src="./img/front-page/wo-people2.jpg" alt="">
+            </figure>
+        </div>
+        <div class="storyItems-left px-10 py-10 ">
+            <figure>
+                <img src="./img/front-page/wo-people3.jpg" alt="">
+            </figure>
+        </div>
+        <div class="storyItems-right px-10 py-10 ">
+            <figure class="flex justify-end">
+                <img src="./img/front-page/wo-people4.jpg" alt="">
+            </figure>
+        </div>
+
+        <div class="px-10 py-10 ">
+            <figure class="flex justify-center">
+                <img src="./img/front-page/change.jpg" alt="" class="w-1/4">
+            </figure>
+        </div>
+
+        <div class="solveItems-left px-10 pb-10 ">
+            <figure>
+                <img src="./img/front-page/so-people1.jpg" alt="">
+            </figure>
+        </div>
+        <div class="solveItems-right px-10 py-10 ">
+            <figure class="flex justify-end">
+                <img src="./img/front-page/so-people2.jpg" alt="">
+            </figure>
+        </div>
+        <div class="solveItems-left px-10 py-10 ">
+            <figure>
+                <img src="./img/front-page/so-people3.jpg" alt="">
+            </figure>
+        </div>
+    </section>
+
+    <section class="how-to-use bg-light-beige py-24">
+        <div class="text-center mb-10 text-2xl font-bold">Diveの始め方</div>
+        <div class="flex sm:flex-col-reverse sm:items-center md:flex-row mb-20">
+            <div class="md:w-1/2 px-16">
+                <div class="text-point mb-10 sm:pt-10 md:pt-0">
+                    STEP 1
+                </div>
+                <div class="font-bold text-xl mb-5 leading-relaxed">
+                    ログイン<br>または<br>サインアップ
+                </div>
+                <div class="">
+                    大学専用のメールアドレス、パスワードのみでいつでもログインできるようになります。初めての方はサインアップから必要情報の記入をします。
+                </div>
+                <!-- <div class="text-point font-bold my-5"><a href="#">ログイン・サインアップ機能について</a></div> -->
+            </div>
+            <div class="md:w-1/2">
+                <img src="./img/front-page/how-to-use1.jpg" alt="" class="rounded-3xl img-content">
+            </div>
+        </div>
+        <div class="flex sm:flex-col sm:items-center md:flex-row mb-20">
+            <div class="md:w-1/2">
+                <img src="./img/front-page/how-to-use2.jpg" alt="" class="rounded-3xl img-content">
+            </div>
+            <div class="md:w-1/2 px-16">
+                <div class="text-point mb-10 sm:pt-10 md:pt-0">
+                    POINT 2
+                </div>
+                <div class="font-bold text-xl mb-5 leading-relaxed">
+                    サインアップ<br>フォームの入力
+                </div>
+                <div class="">
+                    プロフィール画像や、学部、学年、興味のあること等、パーソナルな情報を任意で入力していきます。
+                </div>
+                <div class="text-point font-bold my-5"><a href="#">通知機能について</a></div>
+            </div>
+        </div>
+        <div class="flex sm:flex-col-reverse sm:items-center md:flex-row mb-20">
+            <div class="md:w-1/2 px-16">
+                <div class="text-point mb-10 sm:pt-10 md:pt-0">
+                    POINT 3
+                </div>
+                <div class="font-bold text-xl mb-5 leading-relaxed">
+                    顔認証による<br>2段階認証
+                </div>
+                <div class="">
+                    大学に在学していることを証明するために、学生証と顔認証を行い、認証に成功すれば、アプリを実際にご利用できます。
+                </div>
+                <div class="text-point font-bold my-5"><a href="#">オンラインチャット機能について</a></div>
+            </div>
+            <div class="md:w-1/2">
+                <img src="./img/front-page/how-to-use3.jpg" alt="" class="rounded-3xl img-content">
+            </div>
+        </div>
+    </section>
+
+    <section class="news">
+        <div class="inner">
+          <h2 class="sub_ttl">NEWS</h2>
+    
+    <!-- ここからニュース記事 -->
+    
+          <ul class="news_list">
+              <li class="news_list_item">
+                <a href="" class="news-link">
+                  <div class="news_list_date">
+                    <time>2024.03.08</time>
+                    <p class="news_item">お知らせ</p>
+                  </div>
+                  <p>Webサイトをリニューアルしました。</p>
+                  <span class="arrow"></span>
+                </a>
+              </li>
+              <li class="news_list_item">
+                <a href="" class="news-link">
+                  <div class="news_list_date">
+                    <time>2020.05.12</time>
+                    <p class="news_item">お知らせ</p>
+                  </div>
+                  <p>不具合を一部修正しました。</p>
+                  <span class="arrow"></span>
+                </a>
+              </li>
+              <li class="news_list_item">
+                <a href="" class="news-link">
+                  <div class="news_list_date">
+                    <time>2023.08.07</time>
+                    <p class="news_item">お知らせ</p>
+                  </div>
+                  <p>リアルタイムチャット機能を実装しました。</p>
+                  <span class="arrow"></span>
+                </a>
+              </li>
+              <li class="news_list_item">
+                <a href="" class="news-link">
+                  <div class="news_list_date">
+                    <time>2023.05.23</time>
+                    <p class="news_item">お知らせ</p>
+                  </div>
+                  <p>目的に合わせてマッチングできるフィルタリング機能を実装しました。</p>
+                  <span class="arrow"></span>
+                </a>
+              </li>
+              <li class="news_list_item">
+                <a href="" class="news-link">
+                  <div class="news_list_date">
+                    <time>2023.01.10</time>
+                    <p class="news_item">お知らせ</p>
+                  </div>
+                  <p>ログイン機能とサインアップ機能を実装しました。</p>
+                  <span class="arrow"></span>
+                </a>
+              </li>
+              <li class="news_list_item">
+                <a href="" class="news-link">
+                  <div class="news_list_date">
+                    <time>2022.11.20</time>
+                    <p class="news_item">お知らせ</p>
+                  </div>
+                  <p>Diveの開発が始まりました。</p>
+                  <span class="arrow"></span>
+                </a>
+              </li>
+        </ul>
+    
+    
+        </div>
+</section>
+
+
+
+    <section class="good-points bg-light-beige py-24" id="good-points">
+        <div class="text-center mb-10 text-2xl font-bold">Diveの良いところ</div>
+        <div class="flex sm:flex-col-reverse sm:items-center md:flex-row mb-20">
+            <div class="md:w-1/2 px-16">
+                <div class="text-point mb-10 sm:pt-10 md:pt-0">
+                    POINT 1
+                </div>
+                <div class="font-bold text-xl mb-5 leading-relaxed">
+                    目的別に検索をかけられる<br>フィルタリング機能
+                </div>
+                <div class="">
+                    国籍、学年、学部等を指定することによって、「同じ学部の先輩と繋がる」、「海外の留学生と繋がる」等といった、目的に合わせて検索をかけることができます。
+                </div>
+                <div class="text-point font-bold my-5"><a href="#">フィルタリング機能について</a></div>
+            </div>
+            <div class="md:w-1/2">
+                <img src="./img/front-page/good-points1.jpg" alt="" class="rounded-3xl img-content">
+            </div>
+        </div>
+        <div class="flex sm:flex-col sm:items-center md:flex-row mb-20">
+            <div class="md:w-1/2">
+                <img src="./img/front-page/good-points2.jpg" alt="" class="rounded-3xl img-content">
+            </div>
+            <div class="md:w-1/2 px-16">
+                <div class="text-point mb-10 sm:pt-10 md:pt-0">
+                    POINT 2
+                </div>
+                <div class="font-bold text-xl mb-5 leading-relaxed">
+                    リアルタイムで届く<br>オンライン通知機能
+                </div>
+                <div class="">
+                    いいねボタンを押した時、リアルタイムでボタンを押した相手に通知が届きます。また誰にいいねボタンを押されたかを確認することができます。
+                </div>
+                <div class="text-point font-bold my-5"><a href="#">通知機能について</a></div>
+            </div>
+        </div>
+        <div class="flex sm:flex-col-reverse sm:items-center md:flex-row mb-20">
+            <div class="md:w-1/2 px-16">
+                <div class="text-point mb-10 sm:pt-10 md:pt-0">
+                    POINT 3
+                </div>
+                <div class="font-bold text-xl mb-5 leading-relaxed">
+                    リアルタイムでやり取りできる<br>オンラインチャット機能
+                </div>
+                <div class="">
+                    いいねを押した相手に対して、リアルタイムでチャットを送り合うことができます。最近トークした相手のリストも確認することができます。
+                </div>
+                <div class="text-point font-bold my-5"><a href="#">オンラインチャット機能について</a></div>
+            </div>
+            <div class="md:w-1/2">
+                <img src="./img/front-page/good-points3.jpg" alt="" class="rounded-3xl img-content">
+            </div>
+        </div>
+    </section>
+
+    <section class="security bg-sub py-32 max-md:px-28 md:px-14">
+        <div class="text-center text-3xl pb-20 font-bold">Diveの運営体制</div>
+        <div class="grid md:grid-cols-3 sm:grid-cols-1 gap-10">
+            <div class="bg-white rounded-xl">
+                <div class="flex justify-center sm:my-4">
+                    <img  src="./img/front-page/student.png" alt="" class="w-1/3">
+                </div>
+                <div class="font-bold text-xl text-center">安心安全の学生認証</div>
+                <div class="my-8 mx-4">大学生専用のメールアドレスのみログインできるようになっているため、大学生しかログインできないようになっています。</div>
+            </div>
+            <div class="bg-white rounded-xl">
+                <div class="flex justify-center sm:my-4">
+                    <img  src="./img/front-page/face.png" alt="" class="w-1/3">
+                </div>
+                <div class="font-bold text-xl text-center">2段階認証</div>
+                <div class="my-8 mx-4">メールアドレスとパスワードによる認証に加えて、学生IDと顔認証による2段階認証で安全性を高めています。</div>
+            </div>
+            <div class="bg-white rounded-xl">
+                <div class="flex justify-center sm:my-4">
+                    <img  src="./img/front-page/talk.png" alt="" class="w-1/3">
+                </div>
+                <div class="font-bold text-xl text-center">相互評価システム</div>
+                <div class="my-8 mx-4">マッチング後にお互いの評価をもらうことによって、そのマナーレベルによって、マッチングのしやすさが変わるようになっていきます。</div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="md-flex md-justify-between">
+          <a href="#" class="footer__logo">
+            <img src="./img/logo.png" width="140" height="20" alt="JAJAAAN Logo" />
+          </a>
+          <div class="grid">
+            <div>
+              <p class="footer__navi-heading">SERVICE</p>
+              <ul class="footer__navi">
+                <li><a href="#" class="footer-btn">ログイン</a></li>
+                <li><a href="#" class="footer-btn">フィルタリング</a></li>
+                <li><a href="#" class="footer-btn">チャット</a></li>
+              </ul>
+            </div>
+            <div>
+              <p class="footer__navi-heading">FOLLOW US</p>
+              <ul class="footer__navi">
+                <li><a href="#" class="footer-btn">Facebook</a></li>
+                <li><a href="#" class="footer-btn">Twitter</a></li>
+                <li><a href="#" class="footer-btn">Instagram</a></li>
+              </ul>
+            </div>
+            <div>
+              <p class="footer__navi-heading">ABOUT</p>
+              <ul class="footer__navi">
+                <li><a href="#" class="footer-btn">会社概要</a></li>
+                <li><a href="#" class="footer-btn">お問い合わせ</a></li>
+                <li><a href="#" class="footer-btn">サイトマップ</a></li>
+                <li><a href="#" class="footer-btn">プライバシーポリシー</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="md-flex md-justify-between">
+          <p class="copyright">© 2024 <a href="#">Dive Inc.</a> All Rights Reserved.
+          </p>
+          <div class="footer__social">
+            <a href="#" class="footer-btn">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" />
+              </svg>
+            </a>
+            <a href="#" class="footer-btn">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd" />
+              </svg>
+            </a>
+            <a href="#" class="footer-btn">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+              </svg>
+            </a>
+            <a href="#" class="footer-btn">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./js/frontpage.js"></script>
+
+    
+</body>
+</html>
